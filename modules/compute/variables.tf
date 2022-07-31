@@ -17,7 +17,7 @@ variable "instance_name" {
 
 variable "security_group" {
   type        = string
-  default     = "sg-0a81f4e28bb90bbdd"
+  default     = "sg-083bfe4ae22a87fed"
   description = "Default Security Group used in Project Portfolio"
 }
 
@@ -25,4 +25,10 @@ variable "environment" {
   type        = string
   default     = "Test"
   description = "Current project environment (Test, Dev, Prod)"
+}
+
+variable "user_data" {
+  type        = string
+  default     = ""
+  description = "Script used to install services"
 }

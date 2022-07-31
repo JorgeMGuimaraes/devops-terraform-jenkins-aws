@@ -16,11 +16,13 @@ provider "aws" {
 module "jenkins_server" {
   source        = "./modules/compute"
   instance_name = "Jenkins Server"
+  user_data     = "./modules/compute/install_jenkins.sh"
   environment   = "Test"
 }
 
 module "ngnix_server" {
   source        = "./modules/compute"
   instance_name = "Ngnix Web Server"
+  user_data     = "./modules/compute/install_ngnix.sh"
   environment   = "Test"
 }
