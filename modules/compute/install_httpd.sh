@@ -1,5 +1,7 @@
 #!/bin/bash
 
-sudo yum install epel-release
-sudo yum update
-sudo yum install nginx
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>OLA MUNDO DE $(hostname -f)</h1>" > /var/www/html/index.html
